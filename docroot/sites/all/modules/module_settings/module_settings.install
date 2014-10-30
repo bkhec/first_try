@@ -26,3 +26,12 @@ function module_settings_update_7001() {
     'content_management'
   ));
 }
+
+/**
+ * Enable admin_menu_toolbar.
+ */
+function module_settings_update_7002() {
+  module_enable(array(
+    'admin_menu_toolbar'
+  ));
+}
