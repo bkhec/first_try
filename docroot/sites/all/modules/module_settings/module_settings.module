@@ -9,18 +9,6 @@ include_once 'module_settings.features.inc';
  * @file
  */
 
-function module_settings_init() {
-  global $language;
-  if ($language->language == 'en') {
-    $path = $_GET['q'];
-    if (!path_is_admin($path)) {
-      $language_list = language_list();
-      $default_language = variable_get('language_default', $language_list['fr']);
-      drupal_goto($path, array('language' => $default_language));
-    }
-  }
-}
-
 /**
  * Helper function to test if a module is enabled or not
  *
