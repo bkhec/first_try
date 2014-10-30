@@ -53,3 +53,14 @@ function module_settings_update_7004() {
     'firsttry_basic_page'
   ));
 }
+
+/**
+ * Enable modules Panels, Panels In-Place Editor, Page manager.
+ */
+function module_settings_update_7005() {
+  module_enable(array(
+    'panels',
+    'panels_ipe',
+    'page_manager',
+  ));
+}
