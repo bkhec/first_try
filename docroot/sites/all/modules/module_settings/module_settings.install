@@ -35,3 +35,12 @@ function module_settings_update_7002() {
     'admin_menu_toolbar'
   ));
 }
+
+/**
+ * Enable News Feature.
+ */
+function module_settings_update_7003() {
+  module_enable(array(
+    'firsttry_news'
+  ));
+}
