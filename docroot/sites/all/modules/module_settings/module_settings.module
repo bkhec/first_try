@@ -1,0 +1,93 @@
+<?php
+/**
+ * @file
+ * Code for the Module Settings feature.
+ */
+
+include_once 'module_settings.features.inc';
+/**
+ * @file
+ */
+
+function module_settings_init() {
+  global $language;
+  if ($language->language == 'en') {
+    $path = $_GET['q'];
+    if (!path_is_admin($path)) {
+      $language_list = language_list();
+      $default_language = variable_get('language_default', $language_list['fr']);
+      drupal_goto($path, array('language' => $default_language));
+    }
+  }
+}
+
+/**
+ * Helper function to test if a module is enabled or not
+ *
+ * @param $module
+ * @return bool FALSE if module not exists or disabled | TRUE otherwise
+ */
+ function module_settings_is_module_enabled($module){
+  if(!module_exists($module)) {
+    return FALSE;
+  }
+
+  $result = db_select('system', 's')
+    ->fields('s', array('status'))
+    ->condition('name', $module)
+    ->execute()->fetchField();
+
+  return isset($result) ? $result === '1' : FALSE;
+}
+
+/**
+ * Invokes a hook in all ENABLED modules that implement it.
+ * @see module_invoke_all
+ *
+ * @param $hook
+ *  The name of the hook to invoke.
+ * @param ...
+ *  Arguments to pass to the hook.
+ *
+ * @return
+ *  An array of return values of the hook implementations. If modules return
+ *  arrays from their implementations, those are merged into one array.
+ */
+function module_settings_invoke_all_enabled($hook) {
+  $args = func_get_args();
+  // Remove $hook from the arguments.
+  unset($args[0]);
+  $return = array();
+  foreach (module_implements($hook) as $module) {
+    if (module_settings_is_module_enabled($module)) {
+      $function = $module . '_' . $hook;
+      if (function_exists($function)) {
+        $result = call_user_func_array($function, $args);
+        if (isset($result) && is_array($result)) {
+          $return = array_merge_recursive($return, $result);
+        }
+        elseif (isset($result)) {
+          $return[] = $result;
+        }
+      }
+    }
+  }
+  return $return;
+
+}
+
+/**
+ * A function to get all available permission keys.
+ *
+ * @return
+ *  An array of all permissions keys.
+ */
+function module_settings_get_all_permission_keys() {
+  $permissions = module_settings_invoke_all_enabled('permission');
+  $return = array();
+  foreach ($permissions as $key => $permission) {
+    $return[] = $key;
+  }
+  return $return;
+
+}

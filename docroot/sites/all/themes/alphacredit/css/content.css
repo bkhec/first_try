@@ -1,0 +1,1124 @@
+#main-wrapper #main {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#main-wrapper {
+  padding-top: 166px;
+}
+
+body.navbar-administration #main-wrapper {
+  padding-top: 210px;
+}
+
+body.navbar-administration #main-wrapper {
+  padding-top: 0;
+}
+
+#main-wrapper #main #content {
+  margin: 0 auto;
+}
+
+body a {
+  color: #09a077;
+}
+
+div.tabs {
+  margin: 0;
+}
+
+/* BASIC */
+body .node-page.node-full {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+body.page-node #main-wrapper #main {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#block-system-main div.node.node-page.node-full {
+  max-width: 1180px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* EU COOKIE COMPLIANCE */
+#sliding-popup .popup-content #popup-text h2 {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#sliding-popup .popup-content #popup-text p {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* HOMEPAGE */
+body.page-home #content .section {
+  padding: 10px;
+}
+
+body.page-home #main-wrapper {
+  background: #cfece3 url("../images/background.png") no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body.page-home #main-wrapper #main #content {
+  margin: 0 auto;
+}
+
+/*div.view-home .view-content .views-row {*/
+  /*width: 100%;*/
+  /*float: left;*/
+/*}*/
+
+div.view-home .view-content .views-row {
+  position: relative;
+}
+
+div.view-home .view-content .views-row {
+  margin: 10px;
+  border-radius: 5px;
+  min-height: 320px;
+  text-align: center;
+  padding: 10px;
+  background: #FFF;
+}
+
+div.view-home .view-content .views-row .seperator {
+  display: block;
+  width: 38px;
+  height: 3px;
+  background: #09a077;
+  margin: 10px auto;
+}
+
+.views-row span.home-blocks-intro {
+  font-size: 25px;
+  font-family: "mission gothic italic 2";
+  color: #272727;
+}
+
+#content div.view-home .view-content .views-row .views-field-title h2 {
+  font-size: 40px;
+  line-height: 40px;
+  font-family: "mission gothic base 4";
+  margin: 0;
+  text-transform: uppercase;
+  color: #272727;
+}
+
+#content div.view-home .view-content .views-row .views-field-body {
+  font-size: 15px;
+  font-family: "Open Sans";
+  color: #817e84;
+  padding-bottom: 5px;
+}
+
+#content div.view-home .view-content .views-row .views-field-body a {
+  text-decoration: none;
+  color: #09a077;
+}
+
+#content div.view-home .view-content .views-row .views-field-body a:hover {
+  text-decoration: underline;
+}
+
+#content div.view-home .view-content .views-row .views-field-field-page-link a {
+  font-size: 18px;
+  font-family: "mission gothic italic 2";
+  color: #FFF;
+  background: #09a077;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+}
+
+#content div.view-home .view-content .views-row .views-field-field-page-link a:hover {
+  border: 1px solid #878989;
+  color: #000;
+  background: #FFF;
+  text-decoration: none;
+}
+
+div.view-display-id-block_1 {
+  float: left;
+  background: #FFF;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+/* BASIC PAGE */
+body.page-node #content .section {
+  padding: 0;
+}
+
+body.page-node #block-system-main .content .about-us {
+  background: #2995cf url("../images/bg.png") no-repeat bottom center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #FFF;
+  position: relative;
+  margin-bottom: 80px;
+  max-width: inherit;
+}
+
+body.page-node #block-system-main .content .about-us .node-about-us {
+  margin: 0 auto;
+}
+
+body.page-node #block-system-main .content .about-us .field {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+body.page-node #block-system-main .content .about-us .field-name-homepage-blocks-background {
+  background: transparent url("../images/bg-arrow.png") center top no-repeat;
+  width: 33px;
+  height: 59px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: -59px;
+}
+
+#block-system-main .content .node-page .field-name-title,
+#block-system-main .content .node-page .field-name-field-basic-image {
+  text-align: center;
+}
+
+#block-system-main .content .node-page h1 {
+  font-family: "mission gothic base 3";
+  font-size: 45px;
+  margin: 0;
+  text-transform: uppercase;
+  padding: 1%;
+  color: #FFF;
+}
+
+#block-system-main .content .node-page .views-field-title h2 {
+  font-family: "mission gothic base 2";
+  font-size: 40px;
+  margin: 5px;
+  text-transform: uppercase;
+}
+
+#block-system-main .content .node-page .field-name-body {
+  padding-bottom: 40px;
+}
+
+#block-system-main .content .node-page .field-name-body h3 {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 30px;
+  margin: 0;
+  padding: 0 1%;
+  color: #FFF;
+}
+
+#block-system-main .content .node-page .field-name-field-basic-image {
+  padding-top: 30px;
+}
+
+body.page-node #block-system-main .content .about-us .field-name-seperator {
+  display: block;
+  width: 38px;
+  height: 3px;
+  background: #FFF;
+  margin: 10px auto;
+}
+
+#block-system-main .content .node-page .field-name-field-basic-double-text {
+  float: left;
+}
+
+#block-system-main .content .node-page .field-name-field-basic-double-text,
+#block-system-main .content .node-page .field-name-field-basic-double-text p {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 16px;
+}
+
+#block-system-main .content .node-page .field-name-field-basic-double-text .field-item {
+  width: 98%;
+  float: left;
+  padding: 1%;
+}
+
+#block-system-main .content .node-page .field-name-field-basic-double-text .field-item ul li p {
+  margin: 0 0 10px;
+}
+
+/* TIMELINE */
+#block-views-basic-page-block .view-display-id-block h3 {
+  margin: 0;
+  padding: 2px;
+  font-family: "mission gothic base 2";
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#block-views-basic-page-block .view-display-id-block h3.title {
+  font-family: "mission gothic italic 2";
+  font-size: 21px;
+  line-height: 21px;
+}
+
+#block-views-basic-page-block .view-display-id-block h3.subtitle {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+#block-views-basic-page-block .view-display-id-block .views-field-field-basic-timeline img {
+  display: block;
+  margin: 20px auto;
+}
+
+#block-views-basic-page-block .view-display-id-block .views-field-field-basic-timeline-screen img {
+  display: none;
+}
+
+#block-views-basic-page-block .view-display-id-block .views-field-field-basic-timeline-tablet img {
+  display: none;
+}
+
+/* JOBS */
+body.page-jobs #content .section {
+  padding: 0;
+}
+
+body.page-jobs .panels-flexible-region-2-center {
+  width: 100%;
+}
+
+body.page-jobs #content #block-system-main {
+  margin-bottom: 30px;
+}
+
+body.page-jobs #content .region {
+  background: #1780bf url("../images/bg-jobs.png") no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+body.page-jobs #content .view-display-id-block {
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+body.page-jobs #content .view-display-id-block .view-header {
+  padding-left: 70px;
+  padding-right: 70px;
+  max-width: 1180px;
+  margin: 0 auto 30px;
+}
+
+body.page-jobs #content .view-display-id-block .job-intro {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+body.page-jobs #content .view-display-id-block .job-intro .logo {
+  margin-top: 25px;
+}
+
+body.page-jobs #content .view-display-id-block .job-intro .logo .seperator {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #FFF;
+  margin: 10px auto;
+}
+
+body.page-jobs #content .view-display-id-block .job-intro .title h3 {
+  color: #FFF;
+  font-size: 40px;
+  font-family: "mission gothic base 2";
+  /*font-family: "Open Sans";*/
+    /*font-style: normal;*/
+    /*font-weight: 400;*/
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+}
+
+body.page-jobs #content .view-display-id-block .job-intro .logo .image {
+  background: url("../images/jobs-logo.png");
+  display: block;
+  width: 68px;
+  height: 65px;
+  margin: 0 auto;
+}
+
+div.view-id-jobs.view-display-id-block .views-row {
+  width: 94%;
+  padding: 3%;
+  float: left;
+}
+
+div.view-id-jobs.view-display-id-block .view-empty {
+  background: #FFF;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 24px;
+  line-height: 44px;
+  /*font-family: "Open Sans";*/
+  font-family: "mission gothic base 2";
+  color: #272727;
+}
+
+div.view-id-jobs.view-display-id-block .views-row .node-jobs {
+  background: #FFF;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+}
+
+#content div.view-jobs .views-row .node-jobs .field-name-body {
+  font-size: 15px;
+  font-family: "Open Sans";
+  color: #817e84;
+  padding-bottom: 20px;
+}
+
+#content div.view-jobs .views-row .node-jobs .field-name-body a {
+  text-decoration: none;
+  color: #09a077;
+}
+
+#content div.view-jobs .views-row .node-jobs .field-name-body a:hover {
+  text-decoration: underline;
+}
+
+#content div.view-jobs .views-row .node-jobs .field-name-title h2 {
+  font-size: 40;
+  line-height: 40px;
+  /*font-family: "Open Sans";*/
+  font-family: "mission gothic base 4";
+  margin: 0;
+  text-transform: uppercase;
+  color: #272727;
+}
+
+#content div.view-jobs .views-row .node-jobs .field-name-seperator {
+  display: block;
+  width: 38px;
+  height: 3px;
+  background: #09a077;
+  margin: 10px auto;
+}
+
+div.view-id-jobs.view-display-id-block .views-row .node-jobs .jobs-more-info {
+  font-size: 18px;
+  font-family: "mission gothic italic 2";
+  /*font-family: "Open Sans";*/
+    /*font-style: normal;*/
+    /*font-weight: 400;*/
+  color: #000;
+  background: #FFF;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid #000;
+}
+
+div.view-id-jobs.view-display-id-block .views-row .node-jobs .jobs-more-info:hover {
+  color: #FFF;
+  background: #09a077;
+  border: none;
+  text-decoration: none;
+}
+
+body.page-jobs #content .view-display-id-block .job-intro .jobs-intro-text {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 24px;
+  margin: 0;
+  padding: 0 10%;
+  color: #FFF;
+  text-align: center;
+}
+
+body.page-jobs #content .view-display-id-block .job-intro .intro-linkedin {
+  position: relative;
+  margin: 3%;
+}
+
+body.page-jobs #content .view-display-id-block .job-intro .intro-linkedin a {
+  display: block;
+  border-radius: 10px;
+  padding: 8px 50px 8px 20px;
+  border: 1px solid #FFF;
+  text-transform: uppercase;
+  font-family: "mission gothic base";
+  /*font-family: "Open Sans";*/
+  font-size: 18px;
+  color: #FFF;
+}
+
+body.page-jobs #content .view-display-id-block .job-intro .intro-linkedin a:hover {
+  text-decoration: none;
+}
+
+body.page-jobs #content .view-display-id-block .job-intro .intro-linkedin .linkedin-logo {
+  background: #FFF;
+  border: 1px solid #FFF;
+  border-radius: 10px;
+  width: 39px;
+  color: #36a6c5;
+  font-family: "mission gothic base 4";
+  text-align: center;
+  vertical-align: middle;
+  line-height: 41px;
+  font-size: 30px;
+  position: absolute;
+  right: 0px;
+  top: 1px;
+}
+
+/* TESTIMONY */
+body.page-jobs .view-testimony.view-display-id-block .attachment-before {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .attachment-before .testimony-header {
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .attachment-before .testimony-header .pre {
+  font-family: "mission gothic italic";
+  font-size: 21px;
+  line-height: 24px;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .attachment-before .testimony-header .title {
+  font-family: "mission gothic base 2";
+  font-size: 40px;
+  line-height: 40px;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .views-row {
+  margin-bottom: 30px;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .views-row .group-left,
+body.page-jobs .view-testimony.view-display-id-block .views-row .group-right {
+  clear: both;
+  float: none;
+  width: 100%;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .node-testimony .player {
+  text-align: center;
+  height: 380px;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .node-testimony .field-name-field-testimony-media {
+  /*DIRTY HACK: DS wont show if we do not add an extra field on the full display right region. */
+  display: none;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .node-testimony .field-name-intro-placeholder {
+  background: transparent url("../images/quote.png") center center no-repeat;
+  height: 70px;
+  height: 70px;
+  margin: 0 auto 30px;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .node-testimony .field-name-seperator {
+  display: block;
+  width: 38px;
+  height: 3px;
+  background: #FFF;
+  margin: 10px auto;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .node-testimony .field-name-field-testimony-image img {
+  margin: 0;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .node-testimony .field-name-field-testimony-image {
+  background: #FFF;
+  border-radius: 10px;
+  padding: 10px 10px 4px 10px;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .node-testimony .field-type-video-embed-field {
+  background: #FFF;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .node-testimony .field-type-text-with-summary {
+  color: #FFF;
+  padding: 0 40px;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 23px;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .node-testimony .field-name-field-testimony-about {
+  color: #FFF;
+  text-align: center;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .node-testimony .field-name-field-testimony-about h3 {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 17px;
+}
+
+body.page-jobs .view-testimony.view-display-id-block .node-testimony .field-name-field-testimony-about p {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 17px;
+}
+
+/* CONTACT US*/
+body.page-contact #content .region {
+  background: #1780bf url("../images/bg-contact.png") no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+body.page-contact #content .section {
+  padding: 0;
+}
+
+body.page-contact #content .contact-us-webform,
+body.page-contact #content .pane-alphacredit-contact-contact-header,
+body.page-contact #content .pane-alphacredit-contact-contact-info {
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+body.page-contact #content .contact-intro {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+body.page-contact #content .contact-intro .logo {
+  margin-top: 25px;
+}
+
+body.page-contact #content .contact-intro .logo .seperator {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #FFF;
+  margin: 10px auto;
+}
+
+body.page-contact #content .contact-intro .title h3 {
+  color: #FFF;
+  font-size: 40px;
+  font-family: "mission gothic base 2";
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+}
+
+body.page-contact #content .contact-intro .logo .image {
+  background: url("../images/contact-logo.png");
+  display: block;
+  width: 68px;
+  height: 62px;
+  margin: 0 auto;
+}
+body.page-contact #content .contact-intro .contact-intro-text {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 24px;
+  margin: 0;
+  padding: 0 10%;
+  color: #FFF;
+  text-align: center;
+}
+
+body.page-contact #content .contact-us-webform .webform-submit {
+  background: #0c2a3d;
+  border: 1px solid #FFF;
+  border-radius: 20px;
+  color: #FFF;
+  padding: 10px 40px;
+}
+
+body.page-contact #content .contact-us-webform .form-actions {
+  text-align: center;
+}
+
+body.page-contact #content .contact-us-webform .webform-client-form {
+  padding: 0 5%;
+}
+
+body.page-contact #content .contact-us-webform .webform-text-half {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+body.page-contact #content .contact-us-webform .webform-text-full #edit-submitted-message {
+  margin: 0;
+  border: none;
+  background: #366079;
+  border-radius: 20px;
+  padding: 10px;
+  color: #FFF;
+}
+
+body.page-contact #content .contact-us-webform .webform-text-half input {
+  width: 93%;
+  margin: 0;
+  border: none;
+  background: #366079;
+  border-radius: 20px;
+  padding: 10px;
+  color: #FFF;
+}
+
+body.page-contact #content .contact-info {
+  padding: 0 5%;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+body.page-contact #content .contact-info .address {
+  background: transparent url("../images/location.png") top left no-repeat;
+}
+
+body.page-contact #content .contact-info .phone {
+  background: transparent url("../images/phone.png") top left no-repeat;
+}
+
+body.page-contact #content .contact-info .linkedin {
+  background: transparent url("../images/test.png") top left no-repeat;
+
+}
+
+body.page-contact #content .contact-info .linkedin a {
+  color: #FFF;
+}
+
+body.page-contact #content .contact-info .linkedin a:hover {
+  text-decoration: none;
+}
+
+body.page-contact #content .contact-info .address,
+body.page-contact #content .contact-info .phone,
+body.page-contact #content .contact-info .linkedin {
+  float: none;
+  padding: 0 35px;
+  margin-top: 15px;
+}
+
+body.page-contact #content .contact-us-webform .webform-text-full label,
+body.page-contact #content .contact-us-webform .webform-text-half label {
+  font-style: italic;
+  font-family: "Open Sans";
+  font-weight: 300;
+  color: #FFF;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-size: 18px;
+}
+
+body.page-contact .panels-flexible-region-3-center {
+  width: 100%;
+}
+
+body.page-contact #content #map-canvas {
+  width: 100%;
+  height: 420px;
+}
+
+/* TABLET */
+@media all and (min-width: 560px) and (max-width: 850px) {
+  /* CONTACT US */
+  body.page-contact #content .contact-us-webform .webform-client-form {
+    padding: 0 10%;
+  }
+
+  body.page-contact #content .contact-intro .contact-intro-text {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 24px;
+    margin: 0;
+    padding: 0 10%;
+    color: #FFF;
+    text-align: center;
+  }
+
+  body.page-contact #content .contact-us-webform .webform-text-half input {
+    width: 90%;
+    margin: 0;
+    border: none;
+    background: #366079;
+    border-radius: 20px;
+    padding: 10px;
+    color: #FFF;
+  }
+
+  body.page-contact #content .contact-info {
+    padding: 0 10%;
+    color: #FFF;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 20px;
+    overflow: hidden;
+  }
+
+  /* HOME */
+  div.view-home .view-content .views-row {
+    width: auto;
+  }
+
+  #block-views-basic-page-block .view-display-id-block .timeline {
+    background: url("../images/timeline-mobile.png") center center no-repeat;
+    width: 457px;
+    height: 2537px;
+    margin: 10px auto;
+  }
+
+  body.page-node #block-system-main .content .about-us .field {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #block-views-basic-page-block .view-display-id-block .views-field-field-basic-timeline img {
+    display: none;
+  }
+
+  #block-views-basic-page-block .view-display-id-block .views-field-field-basic-timeline-screen img {
+    display: none;
+  }
+
+  #block-views-basic-page-block .view-display-id-block .views-field-field-basic-timeline-tablet img {
+    display: block;
+    margin: 40px auto;
+  }
+
+  /* JOBS */
+  div.view-id-jobs.view-display-id-block .views-row {
+    width: 48%;
+    padding: 1%;
+    float: left;
+  }
+}
+
+/* SCREEN */
+@media all and (min-width: 851px) {
+
+    .home-row-wrapper {
+        width: 50%;
+        float: left;
+    }
+  /* CONTACT US */
+  body.page-contact #content .contact-us-webform .webform-client-form {
+    padding: 0 15%;
+  }
+
+  body.page-contact #content .contact-intro .contact-intro-text {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 24px;
+    margin: 0;
+    padding: 0 20%;
+    color: #FFF;
+    text-align: center;
+  }
+
+  body.page-contact #content .contact-info {
+    padding: 0 15%;
+    color: #FFF;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 20px;
+    overflow: hidden;
+  }
+
+  /* TIMELINE */
+  #block-views-basic-page-block .view-display-id-block .views-field-field-basic-timeline img {
+    display: none;
+  }
+
+  #block-views-basic-page-block .view-display-id-block .views-field-field-basic-timeline-screen img {
+    display: block;
+    margin: 80px auto 60px;
+  }
+
+  #block-views-basic-page-block .view-display-id-block .views-field-field-basic-timeline-tablet img {
+    display: none;
+  }
+
+  body.page-home #content .section .content {
+    padding: 15px 0 15px 0;
+  }
+
+  body.page-node #block-system-main .content .about-us .field {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  /* JOBS */
+  div.view-id-jobs.view-display-id-block .views-row {
+    width: 32.3%;
+    padding: 0.5%;
+    float: left;
+  }
+
+  body.page-jobs #content .view-display-id-block .job-intro .intro-linkedin {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media all and (min-width: 851px) and  (max-width: 1140px) {
+    #content div.view-home .home-row-wrapper .views-row .views-field-title h2 {
+        font-size: 28px;
+        line-height: 28px;
+    }
+}
+
+@media all and (max-width: 560px) {
+    div.view-home .view-content .views-row {
+        min-height: inherit;
+    }
+
+    .home-row-wrapper .views-row {
+        background: #fff !important;
+    }
+    .views-field-field-page-link {
+        padding-bottom: 15px;
+    }
+}
+/* POPUP */
+body.front .popup {
+  position: relative;
+}
+
+body.front .popup .header {
+  height: 25px;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body.front .popup .header .close {
+  float: right;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popup .content {
+  padding: 15px;
+}
+
+.views-field-body {
+    margin: 0 100px;
+}
+
+div.view-id-jobs.view-display-id-block .views-row .node-jobs .jobs-more-info {
+    bottom: 25px;
+    display: block;
+    left: 37%;
+    position: absolute;
+}
+
+div.view-id-jobs.view-display-id-block .views-row {
+    position: relative;
+}
+
+.field-name-field-basic-double-text a {
+    color:#d3d3d3;
+    text-decoration: underline;
+}
+
+.field-name-field-basic-double-text a:hover {
+    text-decoration: none;
+}
+
+.language-switcher-locale-url {
+    margin-right: 35px !important;
+}
+
+/* SHARED TABLET & SCREEN*/
+@media all and (min-width: 560px) {
+  /* CONTACT US */
+  body.page-contact #content .contact-us-webform .webform-text-half.right {
+    float: right;
+  }
+
+  body.page-contact #content .contact-us-webform .webform-text-half {
+    float: left;
+    width: 50%;
+    margin-bottom: 10px;
+  }
+
+  body.page-contact #content .contact-info .address {
+    background: transparent url("../images/location.png") top left no-repeat;
+  }
+
+  body.page-contact #content .contact-info .phone {
+    background: transparent url("../images/phone.png") top left no-repeat;
+  }
+
+  body.page-contact #content .contact-info .linkedin {
+    background: transparent url("../images/test.png") top left no-repeat;
+
+  }
+
+  body.page-contact #content .contact-info .linkedin a {
+    color: #FFF;
+  }
+
+  body.page-contact #content .contact-info .linkedin a:hover {
+    text-decoration: none;
+  }
+
+  body.page-contact #content .contact-info .address,
+  body.page-contact #content .contact-info .phone,
+  body.page-contact #content .contact-info .linkedin {
+    float: left;
+    width: 27.3%;
+    padding: 0 0 0 6% !important;
+    margin: 0 !important;
+  }
+
+  /* HOME */
+
+  div.view-home .view-content .views-row {
+    margin: 10px;
+    border-radius: 5px;
+    min-height: 320px;
+    text-align: center;
+    padding: 30px 80px;
+    background: #FFF;
+  }
+
+  /*div.view-home .view-content .views-row .field-type-text-with-summary p {*/
+    /*padding: 0 10px;*/
+  /*}*/
+
+  /*div.view-home .view-content .views-row-4 .field-type-text-with-summary p {*/
+    /*padding: 0 50px;*/
+  /*}*/
+
+  div.view-home .view-content .views-row-1 {
+    /*background: #FFF url("../images/block1.png") no-repeat -15px bottom;*/
+  }
+
+  div.view-home .view-content .views-row-1 .field-name-homepage-blocks-background {
+    display: block;
+    position: absolute;
+    left: -9px;
+    bottom: 102px;
+    /*background: transparent url("../images/block1-head.png") no-repeat left bottom;*/
+    width: 9px;
+    height: 68px;
+  }
+
+  div.view-home .view-content .views-row-2 {
+    /*background: url('../images/block2-left.png') left bottom no-repeat, url('../images/block2-right.png') right bottom no-repeat #FFF;*/
+  }
+
+  div.view-home .view-content .views-row-3 {
+    /*background: #FFF url("../images/block3.png") no-repeat right bottom;*/
+  }
+
+  div.view-home .view-content .views-row-4 {
+    /*background: url('../images/block4-right.png') right bottom no-repeat, url('../images/block4-left.png') left bottom no-repeat #FFF;*/
+  }
+
+  div.view-home .view-content .views-row {
+    margin: 10px;
+    /*border-radius: 5px;*/
+    min-height: 320px;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  div.view-home .views-content .views-row {
+    width: 50%;
+    float: left;
+    margin: 0;
+    border-radius: 5px;
+  }
+
+  div.view-display-id-block_1 {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  /* BASIC PAGE*/
+  #block-system-main .content .node-page .field-name-field-basic-double-text .field-item {
+    width: 48%;
+    float: left;
+    padding: 1%;
+  }
+
+  /* JOBS */
+  div.view-jobs .views-row .node-jobs .field-type-text-with-summary p {
+    padding: 0 10px;
+  }
+
+  body.page-jobs #content .view-display-id-block .job-intro .intro-linkedin {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  /* TESTIMONY */
+  body.page-jobs .view-testimony.view-display-id-block .views-row-even .group-left {
+    float: right !important;
+  }
+
+  body.page-jobs .view-testimony.view-display-id-block .views-row-even .group-right {
+    float: left !important;
+  }
+
+  body.page-jobs .view-testimony.view-display-id-block .views-row .group-left {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+
+  body.page-jobs .view-testimony.view-display-id-block .views-row .group-right {
+    float: right;
+    clear: none;
+    width: 50%;
+  }
+}
