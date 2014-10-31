@@ -64,3 +64,12 @@ function module_settings_update_7005() {
     'page_manager',
   ));
 }
+
+/**
+ * Enable module Views content panes.
+ */
+function module_settings_update_7006() {
+  module_enable(array(
+    'views_content',
+  ));
+}
