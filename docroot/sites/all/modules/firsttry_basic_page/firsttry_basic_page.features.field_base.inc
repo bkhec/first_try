@@ -27,7 +27,7 @@ function firsttry_basic_page_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'top10News' => 'News',
+        'top10News' => 'Top 10 News',
       ),
       'allowed_values_function' => '',
     ),
