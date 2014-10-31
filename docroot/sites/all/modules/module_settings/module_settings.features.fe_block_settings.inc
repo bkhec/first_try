@@ -21,10 +21,16 @@ function module_settings_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
+      'bootstrap' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'bartik',
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'firsttry' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'firsttry',
         'weight' => 0,
       ),
       'rubik' => array(
