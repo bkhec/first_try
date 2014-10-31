@@ -48,6 +48,29 @@ function firsttry_news_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__news';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '-5',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_news';
   $strongarm->value = 1;
   $export['i18n_node_extended_news'] = $strongarm;
@@ -81,6 +104,20 @@ function firsttry_news_strongarm() {
   $strongarm->name = 'menu_parent_news';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'news_field_radioactivity_score_add_as_column_in_cm';
+  $strongarm->value = 0;
+  $export['news_field_radioactivity_score_add_as_column_in_cm'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'news_field_radioactivity_score_add_column_cm_sort';
+  $strongarm->value = 0;
+  $export['news_field_radioactivity_score_add_column_cm_sort'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
