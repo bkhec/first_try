@@ -140,6 +140,12 @@ function firsttry_news_views_default_views() {
 
   /* Display: Most popular */
   $handler = $view->new_display('panel_pane', 'Most popular', 'panel_pane_1');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Radioactivity score (field_radioactivity_score:radioactivity_energy) */
+  $handler->display->display_options['sorts']['field_radioactivity_score_radioactivity_energy']['id'] = 'field_radioactivity_score_radioactivity_energy';
+  $handler->display->display_options['sorts']['field_radioactivity_score_radioactivity_energy']['table'] = 'field_data_field_radioactivity_score';
+  $handler->display->display_options['sorts']['field_radioactivity_score_radioactivity_energy']['field'] = 'field_radioactivity_score_radioactivity_energy';
+  $handler->display->display_options['sorts']['field_radioactivity_score_radioactivity_energy']['order'] = 'DESC';
   $translatables['top_10_news'] = array(
     t('Master'),
     t('more'),

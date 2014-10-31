@@ -1,7 +1,7 @@
 name = Module Settings
 description = Use this feature's update hooks to enable modules.
 core = 7.x
-package = Alpha Credit
+package = Firsttry
 version = 7.x-1.0
 project = module_settings
 dependencies[] = content_management
