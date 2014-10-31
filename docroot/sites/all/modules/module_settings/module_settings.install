@@ -21,7 +21,7 @@ function module_settings_update_7001() {
     'rubik',
     'rubik_left'
   ));
-  variable_set('admin_theme','rubik_left');
+  variable_set('admin_theme', 'rubik_left');
   module_enable(array(
     'content_management'
   ));
@@ -73,3 +73,16 @@ function module_settings_update_7006() {
     'views_content',
   ));
 }
+
+
+/**
+ * Enable Node template in Panels.
+ */
+function module_settings_update_7007() {
+  $page_name = "node_view";
+  $page = page_manager_get_page_cache($page_name);
+  $function = ctools_plugin_get_function($page->subtask, "enable callback");
+  $function($page, FALSE);
+  menu_rebuild();
+}
+
