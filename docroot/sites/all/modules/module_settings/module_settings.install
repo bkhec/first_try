@@ -74,7 +74,6 @@ function module_settings_update_7006() {
   ));
 }
 
-
 /**
  * Enable Node template in Panels.
  */
@@ -84,5 +83,14 @@ function module_settings_update_7007() {
   $function = ctools_plugin_get_function($page->subtask, "enable callback");
   $function($page, FALSE);
   menu_rebuild();
+}
+
+/**
+ * Enable module Radioactivity.
+ */
+function module_settings_update_7008() {
+  module_enable(array(
+    'radioactivity',
+  ));
 }
 
