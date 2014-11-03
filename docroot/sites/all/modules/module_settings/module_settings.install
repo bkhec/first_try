@@ -125,3 +125,12 @@ function module_settings_update_7011() {
     'views_infinite_scroll',
   ));
 }
+
+/**
+ * Enable Permissions Feature.
+ */
+function module_settings_update_7012() {
+  module_enable(array(
+    'firsttry_permissions'
+  ));
+}
