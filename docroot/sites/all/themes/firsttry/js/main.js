@@ -3,7 +3,6 @@ jQuery(document).ready(function($){
 
 	//hide timeline blocks which are outside the viewport
 	$timeline_block.each(function(){
-        console.log($(this));
 		if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
 			$(this).find('.cd-timeline-circle, .cd-timeline-content').addClass('is-hidden');
 		}
