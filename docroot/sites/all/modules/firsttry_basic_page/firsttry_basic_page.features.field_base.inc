@@ -28,6 +28,7 @@ function firsttry_basic_page_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         'top10News' => 'Top 10 News',
+        'timeline' => 'News Timeline',
       ),
       'allowed_values_function' => '',
     ),
