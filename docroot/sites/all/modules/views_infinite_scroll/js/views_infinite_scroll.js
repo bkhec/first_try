@@ -9,7 +9,7 @@ Drupal.behaviors.views_infinite_scroll = {
       if(!views_infinite_scroll_was_initialised) {
         views_infinite_scroll_was_initialised = true;
         // There should not be multiple Infinite Scroll Views on the same page
-        if(Drupal.settings.views_infinite_scroll.length == 1) { 
+        if(Drupal.settings.views_infinite_scroll.length == 1) {
           var settings = Drupal.settings.views_infinite_scroll[0];
           var use_ajax = false;
           // Make sure that views ajax is disabled
@@ -24,7 +24,7 @@ Drupal.behaviors.views_infinite_scroll = {
             var view_selector    = 'div.view-id-' + settings.view_name + '.view-display-id-' + settings.display;
             var content_selector = view_selector + ' > ' + settings.content_selector;
             var items_selector   = content_selector + ' ' + settings.items_selector;
-            var pager_selector   = view_selector + ' > div.item-list ' + settings.pager_selector;
+            var pager_selector   = view_selector + ' ' + settings.pager_selector;
             var next_selector    = view_selector + ' ' + settings.next_selector;
             var img_location     = view_selector + ' > div.view-content';
             var img_path         = settings.img_path;
@@ -59,7 +59,7 @@ Drupal.behaviors.views_infinite_scroll = {
             while ($(content_selector).height() > prev_content_height);
 
           }
-          else {  
+          else {
             alert(Drupal.t('Views infinite scroll pager is not compatible with Ajax Views. Please disable "Use Ajax" option.'));
           }
         }
