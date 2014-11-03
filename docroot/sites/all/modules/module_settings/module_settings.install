@@ -116,3 +116,12 @@ function module_settings_update_7010() {
     'jquery_update',
   ));
 }
+
+/**
+ * Enable module Views Infinite Scroll.
+ */
+function module_settings_update_7011() {
+  module_enable(array(
+    'views_infinite_scroll',
+  ));
+}
