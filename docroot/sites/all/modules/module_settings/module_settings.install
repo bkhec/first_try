@@ -107,3 +107,12 @@ function module_settings_update_7009() {
   ));
   variable_set('theme_default', 'firsttry');
 }
+
+/**
+ * Enable module jQuery Update.
+ */
+function module_settings_update_7010() {
+  module_enable(array(
+    'jquery_update',
+  ));
+}
