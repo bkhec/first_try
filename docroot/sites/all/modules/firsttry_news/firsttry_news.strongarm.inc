@@ -92,6 +92,13 @@ function firsttry_news_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'max_nbr_in_queue';
+  $strongarm->value = '10';
+  $export['max_nbr_in_queue'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_news';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -142,6 +149,13 @@ function firsttry_news_strongarm() {
   $strongarm->name = 'node_submitted_news';
   $strongarm->value = 1;
   $export['node_submitted_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'num_days_remove_unpublished';
+  $strongarm->value = '20';
+  $export['num_days_remove_unpublished'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

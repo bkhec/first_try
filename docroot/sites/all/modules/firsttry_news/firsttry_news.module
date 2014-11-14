@@ -4,4 +4,232 @@
  * Code for the News feature.
  */
 
+const FIRSTTRY_NEWS_MODULE = 'firsttry_news';
 include_once 'firsttry_news.features.inc';
+
+/**
+ * Implements hook_menu().
+ */
+function firsttry_news_menu() {
+  $items = array();
+
+  if (module_exists('elysia_cron')) {
+    $items['admin/config/system/cron/news'] = array(
+      'type' => MENU_LOCAL_TASK,
+      'title' => 'Firsttry News',
+      'description' => 'View and manage Firsttry News cron settings',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('firsttry_news_form'),
+      'access arguments' => array('administer elysia_cron'),
+      'weight' => 40,
+    );
+  }
+
+  return $items;
+}
+
+/**
+ * Implements hook_form().
+ */
+function firsttry_news_form($form, &$form_state) {
+  $form[FIRSTTRY_NEWS_MODULE] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Firsttry News Cron settings'),
+  );
+
+  $form[FIRSTTRY_NEWS_MODULE]['num_days_remove_unpublished'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Number of days after which unpublished content may be removed automatically.'),
+    '#default_value' => _firsttry_news_get_nbr_days_to_remove_unpublished_news(),
+    '#element_validate' => array('element_validate_integer_positive'),
+    '#required' => TRUE,
+  );
+  $form[FIRSTTRY_NEWS_MODULE]['max_nbr_in_queue'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Maximum number of news items to delete per queue item.'),
+    '#default_value' => _firsttry_news_getMaxNbrQueue(),
+    '#element_validate' => array('element_validate_integer_positive'),
+    '#required' => TRUE,
+  );
+
+  return system_settings_form($form);
+}
+
+/*
+ * Implements hook_cron().
+ */
+function firsttry_news_cron() {
+  $total_nbr_of_nids = 0;
+  $nbr_days = _firsttry_news_get_nbr_days_to_remove_unpublished_news();
+  $nids_already_queued = _firsttry_news_get_nids_already_queued();
+  $news_item_delete_candidates = _firsttry_news_get_candidates_to_delete($nbr_days);
+
+  _firsttry_news_split_candidates_in_items_and_put_items_in_queue($news_item_delete_candidates, $nids_already_queued, $total_nbr_of_nids);
+
+  watchdog(FIRSTTRY_NEWS_MODULE, 'Cron job has run: queued @nbr of unpublished news items to delete, older than @days day(s).', array(
+    '@nbr' => $total_nbr_of_nids,
+    '@days' => $nbr_days
+  ), WATCHDOG_INFO);
+}
+
+/**
+ * Select the nids of news items which are unpublished and older than $nbr_days days
+ *
+ * @param $nbr_days
+ * @return DatabaseStatementInterface|null
+ */
+function _firsttry_news_get_candidates_to_delete($nbr_days) {
+  $news_item_delete_candidates = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->condition('n.type', 'news')
+    ->condition('n.status', 0)
+    ->condition('n.created', _firsttry_news_getCurrentDateMinusConfiguredNbrDays($nbr_days), '<')
+    ->execute();
+  return $news_item_delete_candidates;
+}
+
+/**
+ * @param $news_items_delete_candidate
+ * @param $nids_already_queued
+ * @param $total_nbr_of_nids
+ */
+function _firsttry_news_split_candidates_in_items_and_put_items_in_queue($news_items_delete_candidate, $nids_already_queued, &$total_nbr_of_nids) {
+  $current_nbr_of_nids = 0;
+  $max_nbr_nids_in_queue = 10;
+  $queue_item = array();
+
+  $queue = DrupalQueue::get('firsttry_news_delete_queue');
+
+  while ($news_item = $news_items_delete_candidate->fetchAssoc()) {
+    $nid_candidate = $news_item['nid'];
+
+    if (!in_array($nid_candidate, $nids_already_queued)) {
+      $current_nbr_of_nids++;
+
+      if ($current_nbr_of_nids < $max_nbr_nids_in_queue) {
+        _firsttry_news_add_to_queue_item($nid_candidate, $queue_item);
+      }
+      else {
+        _firsttry_news_add_to_queue_item($nid_candidate, $queue_item);
+        _firsttry_news_create_item_in_queue_and_update_counters($queue_item, $queue, $current_nbr_of_nids, $total_nbr_of_nids);
+      }
+    }
+  }
+
+  if ($current_nbr_of_nids > 0) {
+    _firsttry_news_create_item_in_queue_and_update_counters($queue_item, $queue, $current_nbr_of_nids, $total_nbr_of_nids);
+  }
+}
+
+/**
+ * Put nids in queue and update counters
+ *
+ * @param $queue_item
+ * @param $queue
+ * @param $current_nbr_of_nids
+ * @param $total_nbr_of_nids
+ * @return array
+ */
+function _firsttry_news_create_item_in_queue_and_update_counters(&$queue_item, $queue, &$current_nbr_of_nids, &$total_nbr_of_nids) {
+  watchdog(FIRSTTRY_NEWS_MODULE, 'createItem with @nbrOfNids nids, first nid @nid', array(
+    '@nbrOfNids' => $current_nbr_of_nids,
+    '@nid' => $queue_item[0],
+    WATCHDOG_INFO
+  ));
+  $queue->createItem($queue_item);
+  $queue_item = array();
+  $total_nbr_of_nids += $current_nbr_of_nids;
+  $current_nbr_of_nids = 0;
+}
+
+/**
+ * Add nid to queue item array
+ *
+ * @param $nid
+ * @param $queue_item
+ */
+function _firsttry_news_add_to_queue_item($nid, &$queue_item) {
+  $queue_item[] = $nid;
+}
+
+/**
+ * @return array of nids
+ */
+function _firsttry_news_get_nids_already_queued() {
+  $queuedNids = array();
+
+  $queryResult = db_select('queue', 'q')
+    ->fields('q', array('data'))
+    ->condition('name', 'firsttry_news_delete_queue')
+    ->execute();
+
+  while ($item = $queryResult->fetchAssoc()) {
+    $nids = unserialize($item['data']);
+    $queuedNids = array_merge($queuedNids, $nids);
+  }
+
+  return $queuedNids;
+}
+
+/**
+ * Implements hook_cron_queue_info().
+ */
+function firsttry_news_cron_queue_info() {
+  $queues['firsttry_news_delete_queue'] = array(
+    'worker callback' => 'firsttry_news_delete_queue_worker',
+    'time' => 10,
+  );
+  return $queues;
+}
+
+/**
+ * Worker for firsttry_news_delete_queue.
+ *
+ * @param object $items
+ *   Any object to be worked on.
+ */
+function firsttry_news_delete_queue_worker($items) {
+  firsttry_news_delete_old_unpublished_news_items($items);
+}
+
+function firsttry_news_delete_old_unpublished_news_items($items) {
+  foreach ($items as $nid) {
+//    sleep(10);
+    node_delete($nid);
+    watchdog(FIRSTTRY_NEWS_MODULE, 'Deleted news item with nid @nid', array('@nid' => $nid), WATCHDOG_INFO);
+  }
+
+  watchdog(FIRSTTRY_NEWS_MODULE, 'Deleted @count of old unpublished news items', array('@count' => count($items)), WATCHDOG_INFO);
+}
+
+/**
+ * Return the number of days before which unpublished content will be deleted
+ *
+ * @return int
+ */
+function _firsttry_news_get_nbr_days_to_remove_unpublished_news() {
+  return variable_get('num_days_remove_unpublished', 90);
+}
+
+/**
+ * Return the maximum number of news items to delete per queue item
+ *
+ * @return int
+ */
+function _firsttry_news_getMaxNbrQueue() {
+  return variable_get('max_nbr_in_queue', 10);
+}
+
+/**
+ * Returns the Epoch time $nbr_days ago.
+ *
+ * @param $nbr_days
+ * @return string
+ */
+function _firsttry_news_getCurrentDateMinusConfiguredNbrDays($nbr_days) {
+  $date = new DateTime();
+  date_sub($date, date_interval_create_from_date_string($nbr_days . ' days'));
+  $until = $date->format('U');
+
+  return $until;
+}

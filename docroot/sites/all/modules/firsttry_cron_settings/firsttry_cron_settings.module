@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Cron settings feature.
+ */
+
+include_once 'firsttry_cron_settings.features.inc';
