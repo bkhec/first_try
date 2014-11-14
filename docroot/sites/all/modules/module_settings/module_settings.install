@@ -127,10 +127,28 @@ function module_settings_update_7011() {
 }
 
 /**
- * Enable Permissions Feature.
+ * Enable Permissions feature.
  */
 function module_settings_update_7012() {
   module_enable(array(
     'firsttry_permissions'
+  ));
+}
+
+/**
+ * Enable module Elysia Cron.
+ */
+function module_settings_update_7013() {
+  module_enable(array(
+    'elysia_cron'
+  ));
+}
+
+/**
+ * Enable module Cron settings feature.
+ */
+function module_settings_update_7014() {
+  module_enable(array(
+    'firsttry_cron_settings'
   ));
 }
